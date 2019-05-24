@@ -1,0 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.app-header{
+    text-align: center;
+    background-color: orange;
+    color: #fff;
+    line-height: 60px;
+}
+.menu-list{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: #555;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+}
+.menu-list>li{
+    display: inline-block;
+    width: 25%;
+    font-size: 15px;
+    line-height: 50px;
+}
+.active{
+    color: orangered;
+}.app-header{
+     text-align: center;
+     background-color: orange;
+     color: #fff;
+     line-height: 60px;
+ }
+.menu-list{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: #555;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+}
+.menu-list>li{
+    display: inline-block;
+    width: 25%;
+    font-size: 15px;
+    line-height: 50px;
+}
+.active{
+    color: orangered;
+}

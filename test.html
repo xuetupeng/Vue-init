@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+<script src="node_modules/vue/dist/vue.min.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    template: '<h1 id="abc" @click="fn">{{ msg }}</h1>',
+    // 如果屏蔽 就需要在
+    data: {
+      msg: 'hello,world',
+      },
+    methods: {
+      fn() {
+        this.$destroy();
+      }
+    },
+    beforeCreate() {
+      console.log('beforeCreate  '+this.msg);
+    },
+    created() {
+      console.log('created  ' +this.msg);
+      let dom = document.getElementById('abc');
+      console.log(dom);
+      this.timer = setInterval(function () {
+        console.log(1);
+      }, 1000)
+    },
+    beforeMount() {
+      console.log('beforeMount  ' +this.msg + `编译好了但是还没有渲染到页面里`);
+      let dom = document.getElementById('abc');
+    },
+    mounted() {
+      console.log('mounted  ' +this.msg);
+      let dom = document.getElementById('abc');
+    },
+    beforeDestroy() {
+      clearInterval(this.timer);
+    },
+    destroyed() {
+      console.log('我被销毁了!');
+    },
+    })
+</script>
+<script>
+</script>
+</html>

@@ -1,0 +1,41 @@
+.message-container {
+  width: 280px;
+  line-height: 34px;
+  font-size: 12px;
+  border-radius: 4px;
+  color: #515a6e;
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  transform: translate(0, 30px);
+  text-indent: 1em;
+  border-spacing: 10px;
+  margin: auto; }
+
+.slide-enter, .slide-leave-to {
+  transform: translate(0, -30px); }
+
+.slide-enter-active, .slide-leave-active {
+  transition: all 3s ease-in-out; }
+
+.slide-enter-to, .slide-leave {
+  transform: translate(0, 30px); }
+
+.message-info {
+  background-color: #f0faff;
+  border: 1px solid #abdcff; }
+
+.message-success {
+  background-color: #edfff3;
+  border: 1px solid #8ce6b0; }
+
+.message-warning {
+  background-color: #fff9e6;
+  border: 1px solid #ffd77a; }
+
+.message-error {
+  background-color: #ffefe6;
+  border: 1px solid #ffb08f; }
+
+/*# sourceMappingURL=styleColor.css.map */

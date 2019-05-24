@@ -1,0 +1,32 @@
+element.style {
+  top: 204px;
+  z-index: 2014;
+}
+.el-notification.right {
+            right: 16px;
+          }
+.el-notification {
+            display: flex;
+            width: 330px;
+            padding: 14px 26px 14px 13px;
+            border-radius: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ebeef5;
+            position: fixed;
+            background-color: #fff;
+            box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+            transition: opacity .3s,transform .3s,left .3s,right .3s,top .4s,bottom .3s;
+            overflow: hidden;
+          }
+.slide-enter, .slide-leave-to{
+  transform: translate(374px, 0);
+}
+.slide-enter-active{
+  transition: all 1s ease-in-out;
+}
+.slide-leave-active{
+  transition: all 1s ease-in-out;
+}
+.slide-enter-to, .slide-leave {
+  transform: translate(0, 0);
+}

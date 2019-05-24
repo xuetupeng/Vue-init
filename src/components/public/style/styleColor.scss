@@ -1,0 +1,38 @@
+
+$font-color: #515a6e;
+.message-container {
+  width: 280px;
+  line-height: 34px;
+  font-size: 12px;
+  border-radius: 4px;
+  color: $font-color;
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  transform: translate(0, 30px);
+  text-indent: 1em;
+  border-spacing: 10px;
+  margin:auto;
+}
+.slide-enter, .slide-leave-to{
+  transform: translate(0, -30px);
+}
+.slide-enter-active, .slide-leave-active{
+  transition: all 3s ease-in-out;
+}
+.slide-enter-to, .slide-leave{
+  transform: translate(0, 30px);
+}
+$type: (
+  info:(background: #f0faff, borderColor:#abdcff),
+  success:(background: #edfff3, borderColor:#8ce6b0),
+  warning:(background: #fff9e6, borderColor:#ffd77a),
+  error:(background: #ffefe6, borderColor:#ffb08f),
+);
+@each $key in map_keys($type) {
+  .message-#{$key} {
+      background-color: map_get(map_get($type, $key), background);
+      border:1px solid map_get(map_get($type, $key), borderColor);
+  }
+};
